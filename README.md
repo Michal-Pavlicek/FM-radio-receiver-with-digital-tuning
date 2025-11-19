@@ -14,3 +14,4 @@ Main objective of this project is to implement functional FM radio receiver with
 * Arduino FM radio Si4703
 * ADKeyboard Module V3
 * OLED display 128x64 1.3" I<sup>2</sup>C
+It's mainly used for displaying info about currently tuned radio station, for example radio frequency, name of the station and name of the song currently playing.
