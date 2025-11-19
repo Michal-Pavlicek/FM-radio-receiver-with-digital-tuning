@@ -9,7 +9,7 @@
 ## Abstract
 Main objective of this project is to implement functional FM radio receiver with digital tuning on microcontroller board Arduino UNO in C.
 
-## Použité komponenty
+## Used components
 * Arduino UNO
 * Arduino FM radio Si4703
 * ADKeyboard Module V3
