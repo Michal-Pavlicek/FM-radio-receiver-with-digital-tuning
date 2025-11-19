@@ -13,4 +13,4 @@ Main objective of this project is to implement functional FM radio receiver with
 * Arduino UNO
 * Arduino FM radio Si4703
 * ADKeyboard Module V3
-* OLED display 128x64 1.3" I^2C
+* OLED display 128x64 1.3" I<sup>2</sup>C
