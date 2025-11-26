@@ -6,6 +6,8 @@
 * Pavlíček Michal
 * Mostecký Filip
 
+![FM_radio_schematic](Images/FMradio_schematic.png)
+
 ## Abstract
 The main objective of this project is to implement fully functional FM radio receiver with digital tuning on ATmega328P-based Arduino Uno board.
 The tuner module Si4703 is controlled over the I<sup>2</sup>C bus. I<sup>2</sup>C OLED display is used for the main user interface.
