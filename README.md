@@ -13,8 +13,8 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ## Used components
 * Arduino UNO
-* FM radio tuner module Si4703 with RDS
-  Receives FM broadcast band, approx. 87.5 - 108 MHz
+* FM radio tuner module Si4703 with RDS  
+  Receives FM broadcast band, approx. 87.5 - 108 MHz  
   Provides support for RDS
 * OLED display 128x64 1.3" I<sup>2</sup>C  
   Main user interface
