@@ -79,6 +79,7 @@ This project implements an FM radio using the **SI4703** chip on an **Arduino UN
 ### RDS (Radio Data System)
 - If available, RDS text (e.g., station name) is displayed permanently.
 - Updates dynamically; if unavailable, the last valid text remains visible.
+- RDS updates dynamically; if unavailable, the last valid text is replaced with `---`.
 
 ---
 
