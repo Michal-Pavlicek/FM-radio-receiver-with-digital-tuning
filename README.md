@@ -71,7 +71,8 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ### RDS
 - Displays station text if available  
-- Updates dynamically; shows last valid text or if unavailable, `---`
+- Updates dynamically
+- Shows last valid text or if unavailable, `---`
 
 ## 4. Program Workflow
 
@@ -87,7 +88,6 @@ Basic push buttons are used for controlling the receiver. This project also feat
    - Read button input (ADC)  
    - Adjust frequency or station list (AUT/MAN)  
    - Update OLED (frequency, mode, volume, RDS)  
-   - Monitor signal strength  
 
 ## 5. Display Layout
 
