@@ -1,133 +1,123 @@
-# FM Radio with SI4703 Chip on Arduino UNO
+# FM Radio with SI4703 on Arduino UNO
 
-This project implements an FM radio using the **SI4703** chip on an **Arduino UNO** board. Control is provided through five buttons integrated in the **ADKeyboard Module V3**. The radio supports **RDS (Radio Data System)** and signal strength measurement via the `si4703_getRSSI()` function. Output information is displayed on a **128×64 OLED display, 1.3" I2C**.
+This project implements an FM radio using the **SI4703** chip on an **Arduino UNO** board. Control is provided via five buttons on the **ADKeyboard Module V3**. The radio supports **RDS (Radio Data System)** and signal strength measurement through `si4703_getRSSI()`. Output is displayed on a **128×64 OLED, 1.3" I2C**.
 
 ---
 
 ## 1. Hardware
 
 ### Components
-- **Arduino UNO** – main microcontroller
-- **FM receiver SI4703** – FM tuner chip, communicates via I2C
-- **OLED display 128×64, 1.3" I2C** – shows frequency, volume, tuning mode (AUT/MAN), and RDS text
-- **ADKeyboard Module V3** – five-button module connected to a single analog input
-- Power supply: 5 V via USB or external source
+- **Arduino UNO** – main microcontroller  
+- **SI4703 FM receiver** – I2C tuner chip  
+- **OLED 128×64, 1.3" I2C** – displays frequency, volume, tuning mode (AUT/MAN), RDS text  
+- **ADKeyboard Module V3** – five-button input on a single analog pin  
+- **Power supply** – 5 V via USB or external source  
 
 ### Connections
-- **SI4703**:
-  - SDA → Arduino A4
-  - SCL → Arduino A5
-  - GND → GND
-  - VCC → 3.3 V
-- **OLED display (I2C)**:
-  - SDA → Arduino A4
-  - SCL → Arduino A5
-  - GND → GND
-  - VCC → 5 V
-- **ADKeyboard Module V3**:
-  - Analog output → Arduino A0
-  - VCC → 5 V
-  - GND → GND
+- **SI4703**  
+  - SDA → A4  
+  - SCL → A5  
+  - GND → GND  
+  - VCC → 3.3 V  
+
+- **OLED (I2C)**  
+  - SDA → A4  
+  - SCL → A5  
+  - GND → GND  
+  - VCC → 5 V  
+
+- **ADKeyboard Module V3**  
+  - Analog out → A0  
+  - VCC → 5 V  
+  - GND → GND  
 
 ---
 
 ## 2. Button Control
 
-### Button Functions
-- **S1** – increase frequency / move up in station list
-- **S2** – decrease frequency / move down in station list
-- **S3** – decrease volume
-- **S4** – increase volume
-- **S5** – switch tuning mode (AUT ↔ MAN)
+### Functions
+- **S1** – increase frequency / next station  
+- **S2** – decrease frequency / previous station  
+- **S3** – volume down  
+- **S4** – volume up  
+- **S5** – toggle tuning mode (AUT ↔ MAN)  
 
-### ADKeyboard Module V3 – Typical ADC Values
-| Button | Typical ADC Value |
-|--------|-------------------|
-| S1     | ~100              |
-| S2     | ~250              |
-| S3     | ~400              |
-| S4     | ~600              |
-| S5     | ~800              |
-| None   | ~1023             |
+### Typical ADC Values
+| Button | ADC Value |
+|--------|-----------|
+| S1     | ~100      |
+| S2     | ~250      |
+| S3     | ~400      |
+| S4     | ~600      |
+| S5     | ~800      |
+| None   | ~1023     |
 
-*Note: Values may vary slightly depending on supply voltage and resistor tolerances. Threshold ranges should be implemented in software.*
+*Note: Values vary with supply voltage and resistor tolerances. Use threshold ranges in software.*
 
 ---
 
 ## 3. Radio Functions
 
 ### Automatic Mode (AUT)
-- Activated at radio startup.
-- Performs automatic station scanning based on signal strength.
-- Uses `si4703_getRSSI()` to evaluate signal.
-- **Threshold for saving to memory is 19** (range 0–127).
-- Stations meeting the threshold are stored in a list.
-- **S1** cycles forward through the list, **S2** cycles backward.
-- The list is looped (wrap-around at the end).
+- Default at startup  
+- Scans FM band, evaluates signal via `si4703_getRSSI()`  
+- **Threshold: 19** (0–127); stations ≥19 saved to list  
+- **S1/S2** cycle through list (wrap-around enabled)  
 
 ### Manual Mode (MAN)
-- Activated by pressing **S5**.
-- **S1** increases frequency by 0.1 MHz.
-- **S2** decreases frequency by 0.1 MHz.
-- Display shows **AUT** or **MAN** in the top-right corner to indicate current mode.
+- Activated by **S5**  
+- **S1**: +0.1 MHz, **S2**: –0.1 MHz  
+- Display shows **AUT** or **MAN** in top-right corner  
 
-### Volume Control
-- **S3** decreases volume.
-- **S4** increases volume.
-- Volume value is displayed on the first line of the OLED along with tuning mode and frequency.
+### Volume
+- **S3**: down, **S4**: up  
+- Value shown on OLED top line with mode and frequency  
 
-### RDS (Radio Data System)
-- If available, RDS text (e.g., station name) is displayed permanently.
-- Updates dynamically; if unavailable, the last valid text remains visible.
-- RDS updates dynamically; if unavailable, the last valid text is replaced with `---`.
+### RDS
+- Displays station text if available  
+- Updates dynamically; if unavailable, shows last valid text or `---`  
 
 ---
 
 ## 4. Program Workflow
 
-1. **Initialization**:
-   - Configure I2C communication with SI4703.
-   - Initialize OLED display.
-   - Start automatic station scanning.
+1. **Initialization**  
+   - Configure I2C (SI4703 + OLED)  
+   - Start automatic scan  
 
-2. **Automatic Scanning**:
-   - Sweep through the FM band.
-   - Measure signal strength with `si4703_getRSSI()`.
-   - Save stations with RSSI ≥ 19 into memory.
+2. **Scanning**  
+   - Sweep FM band  
+   - Save stations with RSSI ≥19  
 
-3. **Main Loop**:
-   - Read button inputs from ADKeyboard Module V3 (analog input).
-   - Adjust frequency or navigate station list depending on mode (AUT/MAN).
-   - Update OLED display (frequency, mode, volume, RDS).
-   - Continuously check signal strength.
+3. **Main Loop**  
+   - Read button input (ADC)  
+   - Adjust frequency or station list (AUT/MAN)  
+   - Update OLED (frequency, mode, volume, RDS)  
+   - Monitor signal strength  
 
 ---
 
 ## 5. Display Layout
 
-- **Top line**:
-  - Tuning mode (AUT/MAN)
-  - Current frequency
-  - Current volume level
-- **Lower section**:
-  - RDS text (if available)
+- **Top line**: mode (AUT/MAN), frequency, volume  
+- **Lower section**: RDS text  
 
 ---
 
-## 6. Implementation Notes
+## 6. Notes
 
-- **RSSI threshold**: fixed at 19. Stations below this value are ignored.
-- **RDS delay**: RDS data may arrive with latency; keep last valid text until new data is available.
-- **ADKeyboard Module V3**: buttons are distinguished by ADC voltage levels; implement mapping logic.
-- **Debouncing**: recommended in software to avoid multiple triggers.
-- **Memory**: station list is stored in RAM; optional EEPROM storage can be added.
+- **RSSI threshold** fixed at 19  
+- **RDS latency**: keep last valid text until new data arrives  
+- **ADKeyboard**: distinguish buttons by ADC voltage mapping  
+- **Debouncing** recommended in software  
+- **Memory**: station list in RAM; EEPROM optional  
 
 ---
 
-## 7. Possible Extensions
+## 7. Extensions
 
-- Save favorite stations into EEPROM.
-- Auto-switch between mono/stereo based on RSSI.
-- Add graphical indicators (e.g., signal strength bar).
-- Implement sleep timer for automatic power-off.
-- Quick access to preset stations.
+- Save favorites to EEPROM  
+- Auto mono/stereo switch based on RSSI  
+- Signal strength bar on OLED  
+- Sleep timer (auto power-off)  
+- Preset station shortcuts  
