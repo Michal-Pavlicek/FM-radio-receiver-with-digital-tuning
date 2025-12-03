@@ -16,7 +16,8 @@ Basic push buttons are used for controlling the receiver. This project also feat
 ## 1. Hardware
 
 ### Used components
-* **Arduino UNO** – main microcontroller  
+* **Arduino UNO**
+  – main microcontroller  
 * **FM radio tuner module Si4703 with RDS**  
   - Receives FM broadcast band, approx. 87.5 - 108 MHz  
   - Provides support for RDS
