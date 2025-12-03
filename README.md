@@ -92,7 +92,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 ## 5. Display Layout
 
 - **Top line**: mode (AUT/MAN), frequency, volume
-- **Middle part**: Radio name from RDS
+- **Middle section**: Radio name from RDS
 - **Lower section**: RDS text
 
 ## 6. Notes
