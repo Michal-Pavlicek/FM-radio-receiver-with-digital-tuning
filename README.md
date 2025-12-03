@@ -64,11 +64,10 @@ Basic push buttons are used for controlling the receiver. This project also feat
 ### Manual Mode (MAN)
 - Activated by **S5**  
 - **S1**: +0.1 MHz, **S2**: –0.1 MHz  
-- Display shows **AUT** or **MAN** in top-right corner  
 
 ### Volume
 - **S3**: down, **S4**: up  
-- Value shown on OLED top line with mode and frequency  
+- Value shown on OLED display
 
 ### RDS
 - Displays station text if available  
@@ -92,13 +91,15 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ## 5. Display Layout
 
-- **Top line**: mode (AUT/MAN), frequency, volume  
+- **Top line**: mode (AUT/MAN), frequency, volume
+- **Middle part**: Radio name from RDS
 - **Lower section**: RDS text  
 
 ## 6. Notes
 
 - **RSSI threshold** fixed at 19  
-- **RDS latency**: keep last valid text until new data arrives  
+**RDS reception**: text is shown only while valid RDS data is being received; if unavailable, `---` is displayed  
+- **RDS latency**: data may arrive with delay; keep last valid text until new data is available  
 - **ADKeyboard**: distinguish buttons by ADC voltage mapping  
 - **Debouncing** recommended in software  
 - **Memory**: station list in RAM; EEPROM optional  
