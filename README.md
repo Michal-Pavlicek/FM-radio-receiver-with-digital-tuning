@@ -71,7 +71,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ### RDS
 - Displays station text if available  
-- Updates dynamically; if unavailable, shows last valid text or `---`
+- Updates dynamically; shows last valid text or if unavailable, `---`
 
 ## 4. Program Workflow
 
