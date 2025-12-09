@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['seek_5fdown_0',['SEEK_DOWN',['../group__gemini__si4703.html#ga73871eb4fd3cf8830e9e23b44c0d9e71',1,'si4703.h']]],
+  ['seek_5fup_1',['SEEK_UP',['../group__gemini__si4703.html#ga6af70605e17fdcdeea166d59672d2a54',1,'si4703.h']]],
+  ['sh1106_2',['SH1106',['../group__oled__lib.html#gae3c4e8fccc05094522aeca27d8c5f906',1,'oled.h']]],
+  ['si4703_20fm_20radio_20library_3',['Si4703 FM Radio Library &amp;lt;si4703.h&amp;gt;',['../group__gemini__si4703.html',1,'']]],
+  ['si4703_2eh_4',['si4703.h',['../si4703_8h.html',1,'']]],
+  ['si4703_5fgetchannel_5',['si4703_getChannel',['../group__gemini__si4703.html#ga7d69672e91254a879279bc682e06f0f8',1,'si4703_getChannel(void):&#160;si4703.c'],['../group__gemini__si4703.html#ga7d69672e91254a879279bc682e06f0f8',1,'si4703_getChannel(void):&#160;si4703.c']]],
+  ['si4703_5fgetrssi_6',['si4703_getRSSI',['../group__gemini__si4703.html#gae14481a7fccd13cb9de4780d3e0e2625',1,'si4703_getRSSI(void):&#160;si4703.c'],['../group__gemini__si4703.html#gae14481a7fccd13cb9de4780d3e0e2625',1,'si4703_getRSSI(void):&#160;si4703.c']]],
+  ['si4703_5finit_7',['si4703_init',['../group__gemini__si4703.html#gac9aac68655b0e2d4f870713d579f07a3',1,'si4703_init(void):&#160;si4703.c'],['../group__gemini__si4703.html#gac9aac68655b0e2d4f870713d579f07a3',1,'si4703_init(void):&#160;si4703.c']]],
+  ['si4703_5fprocess_5frds_8',['si4703_process_rds',['../group__gemini__si4703.html#gaf22c3c03783bd1bef4d0b0b724897cc7',1,'si4703_process_rds(void):&#160;si4703.c'],['../group__gemini__si4703.html#gaf22c3c03783bd1bef4d0b0b724897cc7',1,'si4703_process_rds(void):&#160;si4703.c']]],
+  ['si4703_5freadregisters_9',['si4703_readRegisters',['../group__gemini__si4703.html#gae5b00a50e0160ef0a4b25e7a35083474',1,'si4703_readRegisters(void):&#160;si4703.c'],['../group__gemini__si4703.html#gae5b00a50e0160ef0a4b25e7a35083474',1,'si4703_readRegisters(void):&#160;si4703.c']]],
+  ['si4703_5frefresh_10',['si4703_refresh',['../group__gemini__si4703.html#ga9cfbd1bb376084697eee3e1d68b8c2b2',1,'si4703_refresh(void):&#160;si4703.c'],['../group__gemini__si4703.html#ga9cfbd1bb376084697eee3e1d68b8c2b2',1,'si4703_refresh(void):&#160;si4703.c']]],
+  ['si4703_5frst_5fddr_11',['SI4703_RST_DDR',['../group__gemini__si4703.html#gaa09ac429d2207e853a89a8a131399026',1,'si4703.h']]],
+  ['si4703_5frst_5fpin_12',['SI4703_RST_PIN',['../group__gemini__si4703.html#gaf5380833d3c607e0a12347a5ad77d95f',1,'si4703.h']]],
+  ['si4703_5frst_5fport_13',['SI4703_RST_PORT',['../group__gemini__si4703.html#gab0511a1eb672356c421cefa813a8e59d',1,'si4703.h']]],
+  ['si4703_5fsdio_5fddr_14',['SI4703_SDIO_DDR',['../group__gemini__si4703.html#gaab3e0598a64b64ef89f1bac950c40a0d',1,'si4703.h']]],
+  ['si4703_5fsdio_5fpin_15',['SI4703_SDIO_PIN',['../group__gemini__si4703.html#ga431764effa713d215ded6aa6633467ae',1,'si4703.h']]],
+  ['si4703_5fsdio_5fport_16',['SI4703_SDIO_PORT',['../group__gemini__si4703.html#ga60ec5e97417b9e58bc53b74cf9a570b2',1,'si4703.h']]],
+  ['si4703_5fseekdown_17',['si4703_seekDown',['../group__gemini__si4703.html#gaf5d61d05dcad47329bbd67d001796d0c',1,'si4703_seekDown(void):&#160;si4703.c'],['../group__gemini__si4703.html#gaf5d61d05dcad47329bbd67d001796d0c',1,'si4703_seekDown(void):&#160;si4703.c']]],
+  ['si4703_5fseekup_18',['si4703_seekUp',['../group__gemini__si4703.html#gaf135263d3183645baa389dfe46facd3c',1,'si4703_seekUp(void):&#160;si4703.c'],['../group__gemini__si4703.html#gaf135263d3183645baa389dfe46facd3c',1,'si4703_seekUp(void):&#160;si4703.c']]],
+  ['si4703_5fsetchannel_19',['si4703_setChannel',['../group__gemini__si4703.html#ga0e1c50c7a2b85245ced8c2cb0c23e35c',1,'si4703_setChannel(uint16_t channel):&#160;si4703.c'],['../group__gemini__si4703.html#ga0e1c50c7a2b85245ced8c2cb0c23e35c',1,'si4703_setChannel(uint16_t channel):&#160;si4703.c']]],
+  ['si4703_5fsetvolume_20',['si4703_setVolume',['../group__gemini__si4703.html#ga1514968a9ee2ab48a5e296de668674b5',1,'si4703_setVolume(uint8_t volume):&#160;si4703.c'],['../group__gemini__si4703.html#ga1514968a9ee2ab48a5e296de668674b5',1,'si4703_setVolume(uint8_t volume):&#160;si4703.c']]],
+  ['si4703_5fupdateregisters_21',['si4703_updateRegisters',['../group__gemini__si4703.html#ga375a86d1fc2227ced226996ecb19b27e',1,'si4703_updateRegisters(void):&#160;si4703.c'],['../group__gemini__si4703.html#ga375a86d1fc2227ced226996ecb19b27e',1,'si4703_updateRegisters(void):&#160;si4703.c']]],
+  ['stanice_22',['stanice',['../main_8c.html#aded563fef07c08628a228a0c249fa68e',1,'main.c']]]
+];
