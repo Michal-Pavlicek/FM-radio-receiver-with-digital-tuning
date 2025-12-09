@@ -127,3 +127,4 @@ Basic push buttons are used for controlling the receiver. This project also feat
 * https://github.com/tomas-fryza/avr-labs
 * https://gemini.google.com/app
 * https://wiki.dfrobot.com/ADKeyboard_Module__SKU__DFR0075_
+* https://github.com/sparkfun/SparkFun_Si4703_Arduino_Library
