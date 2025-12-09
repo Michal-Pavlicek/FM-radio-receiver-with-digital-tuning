@@ -103,3 +103,27 @@ Basic push buttons are used for controlling the receiver. This project also feat
 - **ADKeyboard**: distinguish buttons by ADC voltage mapping  
 - **Debouncing** recommended in software  
 - **Memory**: station list in RAM; EEPROM optional  
+
+## 7. Demonstration
+
+### 7.1 Automatic tuning (AUT mode)
+
+<table>
+  <tr>
+    <td><img src="Images/Changing_stations_UP_AUT_mode_showcase.gif" alt="AUT next"></td>
+    <td><img src="Images/Changing_stations_DOWN_AUT_mode_showcase.gif" alt="AUT prev"></td>
+  </tr>
+</table>
+
+### 7.2 Manual tuning (MAN mode)
+
+![MAN_mode_demo](Images/Changing_stations_MAN_mode_showcase.gif)
+
+### 7.3 Volume control
+
+![Volume_demo](Images/Volume_UP_DOWN_showcase.gif)
+
+## 8 References
+* https://github.com/tomas-fryza/avr-labs
+* https://gemini.google.com/app
+* 
