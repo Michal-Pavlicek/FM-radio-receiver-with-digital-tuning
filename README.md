@@ -58,7 +58,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 ### Automatic Mode (AUT)
 - Default at start
 - Scans FM band, evaluates signal via `si4703_getRSSI()`
-- **Threshold: 19** (0–127); stations ≥19 saved to list
+- **Threshold: 20** (0–127); stations ≥20 saved to list
 - **S1/S2** cycle through list (wrap-around enabled)
 
 ### Manual Mode (MAN)
@@ -82,7 +82,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 2. **Scanning**
    - Sweep FM band
-   - Save stations with RSSI ≥19
+   - Save stations with RSSI ≥20
 
 3. **Main Loop**
    - Read button input (ADC)
@@ -97,7 +97,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ## 6. Notes
 
-- **RSSI threshold** fixed at 19
+- **RSSI threshold** fixed at 20
 **RDS reception**: text is shown only while valid RDS data is being received if unavailable, `---` is displayed
 - **RDS latency**: data may arrive with delay; keep last valid text until new data is available
 - **ADKeyboard**: distinguish buttons by ADC voltage mapping  
