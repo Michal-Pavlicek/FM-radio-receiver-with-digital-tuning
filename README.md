@@ -61,13 +61,29 @@ Basic push buttons are used for controlling the receiver. This project also feat
 - **Threshold: 20** (0–127); stations ≥20 saved to list
 - **S1/S2** cycle through list (wrap-around enabled)
 
+### Automatic tuning demonstration
+<table>
+  <tr>
+    <td><img src="Images/Changing_stations_UP_AUT_mode_showcase.gif" alt="AUT next"></td>
+    <td><img src="Images/Changing_stations_DOWN_AUT_mode_showcase.gif" alt="AUT prev"></td>
+  </tr>
+</table>
+
 ### Manual Mode (MAN)
 - Activated by **S5**
 - **S1**: +0.1 MHz, **S2**: –0.1 MHz
 
+### Manual tuning demonstration
+
+![MAN_mode_demo](Images/Changing_stations_MAN_mode_showcase.gif)
+
 ### Volume
 - **S3**: down, **S4**: up
 - Value shown on OLED display
+
+### Volume control demonstration
+
+![Volume_demo](Images/Volume_UP_DOWN_showcase.gif)
 
 ### RDS
 - Displays station text if available
@@ -104,26 +120,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 - **Debouncing** recommended in software  
 - **Memory**: station list in RAM; EEPROM optional  
 
-## 7. Demonstration
-
-### 7.1 Automatic tuning (AUT mode)
-
-<table>
-  <tr>
-    <td><img src="Images/Changing_stations_UP_AUT_mode_showcase.gif" alt="AUT next"></td>
-    <td><img src="Images/Changing_stations_DOWN_AUT_mode_showcase.gif" alt="AUT prev"></td>
-  </tr>
-</table>
-
-### 7.2 Manual tuning (MAN mode)
-
-![MAN_mode_demo](Images/Changing_stations_MAN_mode_showcase.gif)
-
-### 7.3 Volume control
-
-![Volume_demo](Images/Volume_UP_DOWN_showcase.gif)
-
-## 8. References
+## 7. References
 * https://github.com/tomas-fryza/avr-labs
 * https://gemini.google.com/app
 * https://wiki.dfrobot.com/ADKeyboard_Module__SKU__DFR0075_
