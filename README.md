@@ -123,7 +123,7 @@ Basic push buttons are used for controlling the receiver. This project also feat
 
 ![Volume_demo](Images/Volume_UP_DOWN_showcase.gif)
 
-## 8 References
+## 8. References
 * https://github.com/tomas-fryza/avr-labs
 * https://gemini.google.com/app
 * https://wiki.dfrobot.com/ADKeyboard_Module__SKU__DFR0075_
